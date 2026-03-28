@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Matti Clements — Board CV</title>
+
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+ 
+
+  body {
+
+    font-family: 'Georgia', 'Times New Roman', serif;
+
+    background: #F5F6F8;
+
+    color: #2C2C2A;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+
+  }
+
+ 
+
+  .page {
+
+    max-width: 860px;
+
+    margin: 48px auto;
+
+    background: #ffffff;
+
+    box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+
+  }
+
+ 
+
+  /* ── HEADER ─────────────────────────────────────── */
+
+  .header {
+
+    background: #1B3A5C;
+
+    padding: 52px 56px 40px;
+
+    color: white;
+
+  }
+
+  .header h1 {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+
+    color: #ffffff;
+
+    margin-bottom: 8px;
+
+  }
+
+  .header .credentials {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 14px;
+
+    color: #9EC5E0;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 24px;
+
+  }
+
+  .header .tagline {
+
+    font-style: italic;
+
+    font-size: 17px;
+
+    color: #D4E8F5;
+
+    line-height: 1.6;
+
+    max-width: 640px;
+
+    border-left: 3px solid #1A7A6E;
+
+    padding-left: 18px;
+
+  }
+
+ 
+
+  /* ── CONTACT BAR ─────────────────────────────────── */
+
+  .contact-bar {
+
+    background: #1A7A6E;
+
+    padding: 12px 56px;
+
+    display: flex;
+
+    gap: 32px;
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 13px;
+
+    color: #C8EDE8;
+
+  }
+
+  .contact-bar span { opacity: 0.9; }
+
+ 
+
+  /* ── BODY ────────────────────────────────────────── */
+
+  .body { padding: 48px 56px; }
+
+ 
+
+  /* ── POSITIONING ─────────────────────────────────── */
+
+  .positioning {
+
+    background: #F0F6FA;
+
+    border-left: 4px solid #1B3A5C;
+
+    padding: 20px 24px;
+
+    margin-bottom: 40px;
+
+    border-radius: 0 6px 6px 0;
+
+  }
+
+  .positioning p {
+
+    font-size: 15px;
+
+    color: #2E4E6B;
+
+    line-height: 1.7;
+
+    margin-bottom: 10px;
+
+  }
+
+  .positioning p:last-child { margin-bottom: 0; }
+
+  .positioning .key-line {
+
+    font-weight: bold;
+
+    color: #1B3A5C;
+
+  }
+
+ 
+
+  /* ── SECTION HEADING ─────────────────────────────── */
+
+  .section { margin-bottom: 40px; }
+
+  .section-title {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+
+    color: #1A7A6E;
+
+    margin-bottom: 6px;
+
+  }
+
+  .section-rule {
+
+    border: none;
+
+    border-bottom: 2px solid #1A7A6E;
+
+    margin-bottom: 20px;
+
+  }
+
+ 
+
+  /* ── VALUE PROPOSITION CARDS ──────────────────────── */
+
+  .value-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 4px;
+
+  }
+
+  .value-card {
+
+    background: #F0F4F8;
+
+    border-top: 3px solid #1B3A5C;
+
+    padding: 18px 20px;
+
+    border-radius: 0 0 6px 6px;
+
+  }
+
+  .value-card h4 {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #1B3A5C;
+
+    margin-bottom: 6px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+
+  }
+
+  .value-card p {
+
+    font-size: 13px;
+
+    color: #444441;
+
+    line-height: 1.55;
+
+  }
+
+ 
+
+  /* ── BOARD TABLE ──────────────────────────────────── */
+
+  .board-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+
+  }
+
+  .board-table thead tr {
+
+    background: #1B3A5C;
+
+    color: white;
+
+  }
+
+  .board-table thead th {
+
+    padding: 10px 12px;
+
+    text-align: left;
+
+    font-weight: 700;
+
+    font-size: 12px;
+
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+
+  }
+
+  .board-table tbody tr { border-bottom: 1px solid #DDE8F0; }
+
+  .board-table tbody tr:nth-child(even) { background: #F5F8FB; }
+
+  .board-table tbody td { padding: 10px 12px; vertical-align: top; line-height: 1.5; }
+
+  .board-table .role-cell { font-weight: 700; color: #1B3A5C; font-size: 12.5px; }
+
+  .board-table .org-cell { color: #2E4E6B; }
+
+  .board-table .date-cell { color: #888780; white-space: nowrap; font-style: italic; }
+
+  .board-table .contrib-cell { color: #2C2C2A; font-size: 13px; }
+
+ 
+
+  /* ── EXECUTIVE ROLES ──────────────────────────────── */
+
+  .exec-role { margin-bottom: 28px; }
+
+  .exec-role-header {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 0;
+
+    margin-bottom: 10px;
+
+    flex-wrap: wrap;
+
+  }
+
+  .exec-title {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    color: #1B3A5C;
+
+  }
+
+  .exec-separator {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 14px;
+
+    color: #B4B2A9;
+
+    margin: 0 8px;
+
+  }
+
+  .exec-org {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 14px;
+
+    color: #2E4E6B;
+
+  }
+
+  .exec-dates {
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 13px;
+
+    color: #888780;
+
+    font-style: italic;
+
+    margin-left: auto;
+
+  }
+
+  .exec-bullets { padding-left: 0; list-style: none; }
+
+  .exec-bullets li {
+
+    padding: 3px 0 3px 18px;
+
+    position: relative;
+
+    font-size: 14px;
+
+    color: #2C2C2A;
+
+    line-height: 1.6;
+
+  }
+
+  .exec-bullets li::before {
+
+    content: '–';
+
+    position: absolute;
+
+    left: 0;
+
+    color: #1A7A6E;
+
+    font-weight: bold;
+
+  }
+
+ 
+
+  /* ── QUALIFICATIONS ───────────────────────────────── */
+
+  .qual-list { list-style: none; padding: 0; }
+
+  .qual-list li {
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #E8EFF5;
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 14px;
+
+    color: #2C2C2A;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+  }
+
+  .qual-list li:last-child { border-bottom: none; }
+
+  .qual-list .qual-name { color: #1B3A5C; font-weight: 700; }
+
+  .qual-list .qual-inst { color: #444441; }
+
+  .qual-list .qual-year { color: #888780; font-size: 13px; font-style: italic; white-space: nowrap; padding-left: 12px; }
+
+ 
+
+  /* ── FOOTER ───────────────────────────────────────── */
+
+  .footer {
+
+    background: #1B3A5C;
+
+    padding: 20px 56px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-family: 'Arial', sans-serif;
+
+    font-size: 12px;
+
+    color: #9EC5E0;
+
+  }
+
+  .footer .name { color: white; font-weight: 700; font-size: 13px; }
+
+ 
+
+  @media print {
+
+    body { background: white; }
+
+    .page { margin: 0; box-shadow: none; max-width: 100%; }
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+ 
+
+  <!-- HEADER -->
+
+  <div class="header">
+
+    <h1>MATTI CLEMENTS</h1>
+
+    <div class="credentials">GAICD &nbsp;·&nbsp; Registered Psychologist &nbsp;·&nbsp; Executive MBA</div>
+
+    <p class="tagline">A board director who brings rare, evidence-based expertise in the conditions through which organisations dependent on exceptional people achieve sustained excellence — and manage the human and cultural risks of not doing so.</p>
+
+  </div>
+
+ 
+
+  <!-- CONTACT BAR -->
+
+  <div class="contact-bar">
+
+    <span>matti.clements@gmail.com</span>
+
+    <span>linkedin.com/in/matticlements</span>
+
+    <span>Melbourne, Victoria</span>
+
+  </div>
+
+ 
+
+  <!-- BODY -->
+
+  <div class="body">
+
+ 
+
+    <!-- POSITIONING -->
+
+    <div class="positioning">
+
+      <p>With 20 years at the intersection of elite performance, psychology, strategy, and organisational culture, Matti Clements brings to a board what few directors can: a deeply practical, systems-level understanding of how organisations that depend on high-performing people create and protect their value.</p>
+
+      <p>As Acting CEO of the Australian Institute of Sport she led sector-wide reform, secured historic federal funding of $300M p.a., and drove Australia's first national high performance strategy — uniting a complex, geographically distributed stakeholder ecosystem behind a shared vision. She holds the AICD Company Directors qualification and has chaired and contributed to nine boards and committees.</p>
+
+      <p class="key-line">Her value is greatest on an already strong board of an organisation where human performance is both the primary asset and the primary source of strategic risk.</p>
+
+    </div>
+
+ 
+
+    <!-- VALUE PROPOSITION -->
+
+    <div class="section">
+
+      <div class="section-title">Board Value Proposition</div>
+
+      <hr class="section-rule">
+
+      <div class="value-grid">
+
+        <div class="value-card">
+
+          <h4>Performance Architecture</h4>
+
+          <p>Designed and led national frameworks through which Australia's elite athletes and organisations achieve sustained excellence — systems that balance ambition with human sustainability, adopted as sector standards.</p>
+
+        </div>
+
+        <div class="value-card">
+
+          <h4>Human Risk Intelligence</h4>
+
+          <p>Brings a registered psychologist's diagnostic lens to board-level people risk: burnout, culture failure, leadership fragility, talent retention. Turns wellbeing from a support function into a value creation and risk governance asset.</p>
+
+        </div>
+
+        <div class="value-card">
+
+          <h4>Complex Stakeholder Leadership</h4>
+
+          <p>Built and managed complex, geographically distributed coalitions — 47+ sporting bodies, federal government, international partners — across contested terrain, competing interests, and national consequence.</p>
+
+        </div>
+
+        <div class="value-card">
+
+          <h4>Commercial & Governance Depth</h4>
+
+          <p>Managed operational budgets to $38M, grant portfolios of $214.5M+, federal funding negotiations, and executive remuneration. GAICD-qualified; chaired and contributed to nine committees across sport, government, and military.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+ 
+
+    <!-- BOARD EXPERIENCE -->
+
+    <div class="section">
+
+      <div class="section-title">Board &amp; Committee Experience</div>
+
+      <hr class="section-rule">
+
+      <table class="board-table">
+
+        <thead>
+
+          <tr>
+
+            <th style="width:22%">Role</th>
+
+            <th style="width:22%">Organisation</th>
+
+            <th style="width:11%">Period</th>
+
+            <th>Strategic Contribution</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td class="role-cell">Independent Member, Career Management Star Board</td>
+
+            <td class="org-cell">Australian Army</td>
+
+            <td class="date-cell">2023–</td>
+
+            <td class="contrib-cell">Strategic oversight of leadership pipeline development, talent identification, and succession planning across the Army's officer cadre.</td>
+
+          </tr>
+
+          <tr>
+
+            <td class="role-cell">Chair, HP2032+ Strategy Leadership Group</td>
+
+            <td class="org-cell">Australian High Performance Sector</td>
+
+            <td class="date-cell">2022–</td>
+
+            <td class="contrib-cell">Leading national coalescence behind Australia's WinWell vision — sustainable excellence across all elite codes ahead of Brisbane 2032.</td>
+
+          </tr>
+
+          <tr>
+
+            <td class="role-cell">Executive Member, Athlete Advisory Committee</td>
+
+            <td class="org-cell">Australian Institute of Sport</td>
+
+            <td class="date-cell">2018–</td>
+
+            <td class="contrib-cell">Championed athlete voice at sector and government level; shaped welfare, pathways, and long-term sustainability of Australia's elite sport ecosystem.</td>
+
+          </tr>
+
+          <tr>
+
+            <td class="role-cell">Chair, National Advisory Committee for Athlete Wellbeing</td>
+
+            <td class="org-cell">Australian Institute of Sport</td>
+
+            <td class="date-cell">2018–2021</td>
+
+            <td class="contrib-cell">Strategic leadership of initiatives safeguarding athlete health and long-term sustainability across Australia's high performance landscape.</td>
+
+          </tr>
+
+          <tr>
+
+            <td class="role-cell">Independent Chair, Player Development Program Committee</td>
+
+            <td class="org-cell">Rugby Union Players' Association</td>
+
+            <td class="date-cell">2017–2021</td>
+
+            <td class="contrib-cell">Frameworks prioritising athlete welfare, education, and player voice in career pathways during and beyond professional careers.</td>
+
+          </tr>
+
+          <tr>
+
+            <td class="role-cell">Director &amp; Nominations/Remuneration Committee</td>
+
+            <td class="org-cell">Tennis Victoria</td>
+
+            <td class="date-cell">2016–2020</td>
+
+            <td class="contrib-cell">Governance oversight across performance pathways and grassroots participation; shaped board composition and executive rewards framework.</td>
+
+          </tr>
+
+          <tr>
+
+            <td class="role-cell">Member, Nominations/Remuneration Committee</td>
+
+            <td class="org-cell">AusCycling</td>
+
+            <td class="date-cell">2015–2019</td>
+
+            <td class="contrib-cell">Led succession planning and executive compensation strategy, securing leadership aligned with growth objectives.</td>
+
+          </tr>
+
+          <tr>
+
+            <td class="role-cell">Member, AFL Education Committee</td>
+
+            <td class="org-cell">AFL</td>
+
+            <td class="date-cell">2010–2012</td>
+
+            <td class="contrib-cell">Shaped educational programs and pathways to empower players with lifelong skills and career transition capability.</td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+ 
+
+    <!-- EXECUTIVE EXPERIENCE -->
+
+    <div class="section">
+
+      <div class="section-title">Executive Experience</div>
+
+      <hr class="section-rule">
+
+ 
+
+      <div class="exec-role">
+
+        <div class="exec-role-header">
+
+          <span class="exec-title">Acting CEO / Executive Director</span>
+
+          <span class="exec-separator">|</span>
+
+          <span class="exec-org">Australian Institute of Sport (AIS)</span>
+
+          <span class="exec-dates">2023 – present</span>
+
+        </div>
+
+        <ul class="exec-bullets">
+
+          <li>Led sector-wide strategic reform resulting in historic federal funding of <strong>$300M p.a.</strong> — the largest investment in Australian high performance sport in a generation.</li>
+
+          <li>Delivered Australia's first national high performance strategy (HP2032+), uniting 47+ sporting bodies and government partners behind a shared vision for sustainable sporting excellence ahead of Brisbane 2032.</li>
+
+          <li>Managed operational budgets of <strong>$38M</strong> and grant portfolios of <strong>$214.5M+</strong>, with full accountability for governance, risk, and organisational performance.</li>
+
+          <li>Drove successful Olympic and Paralympic outcomes across a complex, nationally distributed organisation operating in international environments.</li>
+
+        </ul>
+
+      </div>
+
+ 
+
+      <div class="exec-role">
+
+        <div class="exec-role-header">
+
+          <span class="exec-title">Director, People Development &amp; Wellbeing</span>
+
+          <span class="exec-separator">|</span>
+
+          <span class="exec-org">Australian Institute of Sport</span>
+
+          <span class="exec-dates">2018 – 2023</span>
+
+        </div>
+
+        <ul class="exec-bullets">
+
+          <li>Authored national strategies for athlete wellbeing, gender diversity, and engagement — adopted as sector standards across Australian sport.</li>
+
+          <li>Built and led multidisciplinary national teams; designed performance culture frameworks applied across Australia's elite sport system.</li>
+
+        </ul>
+
+      </div>
+
+ 
+
+      <div class="exec-role">
+
+        <div class="exec-role-header">
+
+          <span class="exec-title">Founder &amp; Managing Director</span>
+
+          <span class="exec-separator">|</span>
+
+          <span class="exec-org">Mental Edge Consulting</span>
+
+          <span class="exec-dates">2004 – 2017</span>
+
+        </div>
+
+        <ul class="exec-bullets">
+
+          <li>Founded and scaled Australia's largest sport wellbeing consultancy, delivering programs across Cricket Australia, Tennis Australia, AFL, NRL, and multiple Olympic sports.</li>
+
+          <li>Full P&amp;L accountability; oversaw financial management, strategy, governance, and national program delivery across geographically distributed operations.</li>
+
+          <li>Developed national frameworks for athlete and staff performance that set international standards and benchmarks.</li>
+
+        </ul>
+
+      </div>
+
+ 
+
+      <div class="exec-role">
+
+        <div class="exec-role-header">
+
+          <span class="exec-title">General Manager, Culture, Leadership &amp; Wellbeing</span>
+
+          <span class="exec-separator">|</span>
+
+          <span class="exec-org">St Kilda Football Club</span>
+
+          <span class="exec-dates">2013 – 2014</span>
+
+        </div>
+
+      </div>
+
+ 
+
+      <div class="exec-role">
+
+        <div class="exec-role-header">
+
+          <span class="exec-title">National Manager, Wellbeing Program</span>
+
+          <span class="exec-separator">|</span>
+
+          <span class="exec-org">AFL Players Association</span>
+
+          <span class="exec-dates">2009 – 2012</span>
+
+        </div>
+
+      </div>
+
+ 
+
+      <div class="exec-role">
+
+        <div class="exec-role-header">
+
+          <span class="exec-title">Senior Psychologist</span>
+
+          <span class="exec-separator">|</span>
+
+          <span class="exec-org">Australian Institute of Sport</span>
+
+          <span class="exec-dates">2006 – 2009</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+ 
+
+    <!-- QUALIFICATIONS -->
+
+    <div class="section">
+
+      <div class="section-title">Qualifications &amp; Professional Memberships</div>
+
+      <hr class="section-rule">
+
+      <ul class="qual-list">
+
+        <li>
+
+          <span><span class="qual-name">Company Directors Course (GAICD)</span> &nbsp;—&nbsp; <span class="qual-inst">Australian Institute of Company Directors</span></span>
+
+          <span class="qual-year">2025</span>
+
+        </li>
+
+        <li>
+
+          <span><span class="qual-name">Executive MBA</span> &nbsp;—&nbsp; <span class="qual-inst">University of Melbourne (part-scholarship)</span></span>
+
+          <span class="qual-year">2015–2017</span>
+
+        </li>
+
+        <li>
+
+          <span><span class="qual-name">Registered Psychologist</span> &nbsp;—&nbsp; <span class="qual-inst">Victorian Psychological Board</span></span>
+
+          <span class="qual-year">Current</span>
+
+        </li>
+
+        <li>
+
+          <span><span class="qual-name">Bachelor of Science (Honours), Psychology</span></span>
+
+          <span class="qual-year"></span>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+ 
+
+  </div><!-- /body -->
+
+ 
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+
+    <span class="name">Matti Clements</span>
+
+    <span>matti.clements@gmail.com &nbsp;·&nbsp; Melbourne, Victoria</span>
+
+    <span>linkedin.com/in/matticlements</span>
+
+  </div>
+
+ 
+
+</div>
+
+</body>
+
+</html>
